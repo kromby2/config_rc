@@ -1,0 +1,5 @@
+feh -B black\
+-d \
+--draw-exif \
+--geometry 500x500 \
+--scale-down
