@@ -20,6 +20,9 @@ set wildmode=longest,list,full "-Sets autocomplete as full list as bash is
 set wildmenu "turns on menu instead of doing full screen for autocomplete
 set mouse=a "for mouse in bash or gui"
 set nowrap
+"Enable folding
+set foldmethod=indent
+set foldlevel=99
 
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -28,6 +31,10 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap K <PageUp> 
 nnoremap J <PageDown> 
 nnoremap \vc <Plug>VimtexCompile
+nnoremap <space> za "Remap code folding from space to za"
+
+"autocmd FileType python nnoremap <buffer> <F1> :exec '!clear; python' shellescape(@%, 1)<cr>
+autocmd FileType python nnoremap <buffer> \cp :exec '!clear; python' shellescape(@%, 1)<cr>
 
 "-----------neoBundle----------
 " Note: Skip initialization for vim-tiny or vim-small.
@@ -56,6 +63,7 @@ NeoBundle 'itchyny/lightline.vim'	"Light toolbar
 NeoBundle 'vimwiki/vimwiki'		"Vimwiki
 NeoBundle 'davidhalter/jedi-vim'	"Python plugin
 NeoBundle 'lervag/vimtex'		"Vim tEx plugin
+NeoBundle 'jistr/vim-nerdtree-tabs'	"File manager plugin
 
 call neobundle#end()
 
