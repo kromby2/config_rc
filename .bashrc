@@ -8,7 +8,8 @@ set -o vi
 [[ $- != *i* ]] && return
 
 #alias ls='ls --color=auto'
-#alias ls='ls -lh --color=auto'
+alias ls='ls -lh --color=always'
+alias grep='grep --color=always'
 #alias ipython='ipython --TerminalInteractiveShell.editing_mode=vi'
 PS1='[\u@\h \W]\$ '
 
